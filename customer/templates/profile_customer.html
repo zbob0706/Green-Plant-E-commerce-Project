@@ -1,0 +1,57 @@
+{% extends 'dash_board_customer.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h2>Profile</h2>
+    <form method="POST" action="{{ url_for('customer_bp.profile') }}">
+        {{ form.hidden_tag() }}
+
+
+
+        <div class="form-group">
+            {{ form.email.label(class="form-label") }}
+            {{ form.email(class="form-control", class=form.email.errors and "is-invalid" or "") }}
+            {% for error in form.email.errors %}
+            <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="form-group">
+            {{ form.first_name.label(class="form-label") }}
+            {{ form.first_name(class="form-control", class=form.first_name.errors and "is-invalid" or "") }}
+            {% for error in form.first_name.errors %}
+            <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="form-group">
+            {{ form.last_name.label(class="form-label") }}
+            {{ form.last_name(class="form-control", class=form.last_name.errors and "is-invalid" or "") }}
+            {% for error in form.last_name.errors %}
+            <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="form-group">
+            {{ form.phone.label(class="form-label") }}
+            {{ form.phone(class="form-control", class=form.phone.errors and "is-invalid" or "") }}
+            {% for error in form.phone.errors %}
+            <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="form-group">
+            {{ form.address.label(class="form-label") }}
+            {{ form.address(class="form-control", class=form.address.errors and "is-invalid" or "") }}
+            {% for error in form.address.errors %}
+            <div class="invalid-feedback">{{ error }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</div>
+{% endblock %}

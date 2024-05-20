@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/favicon" href="static/image/logo/logo_cromwell.jpg">
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+    <!-- feather -->
+    <link rel="stylesheet" type="text/css" href="static/css/feather.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" type="text/css" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/owl.theme.default.min.css">
+    <!-- swiper slider -->
+    <link rel="stylesheet" type="text/css" href="static/css/swiper-bundle.min.css">
+    <!-- magnific-popup css -->
+    <link rel="stylesheet" type="text/css" href="static/css/magnific-popup.css">
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="static/css/slick.css">
+    <!-- aniamte css -->
+    <link rel="stylesheet" type="text/css" href="static/css/animate.min.css">
+    <!-- font awsome -->
+    <link rel="stylesheet" type="text/css" href="static/css/all.min.css">
+    <!-- collection css -->
+    <link rel="stylesheet" type="text/css" href="static/css/collection.css">
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+
+<body>
+    <!-- top notification start -->
+    <div class="top-noticifaction-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <ul class="noticifaction-entry">
+                        <li class="notify-wrap contact-link">
+                            <div class="text-wrap">
+                                <div class="richtext">
+                                    <p>Free shipping plant store for above 78.00</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="notify-wrap notify-wrap-center">
+                            <div class="richtext">
+                                <p>Welcome to our Cromwell Garden Centre online store</p>
+                            </div>
+                        </li>
+                        <li class="notify-wrap notify-wrap-right">
+                            <div class="richtext">
+                                <p>Online order <a href="" title="tel:+291003600600">+2910 0360 0600</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- top notification end -->
+    <!-- header start -->
+    <header class="main-header">
+        <div class="header-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="header-main">
+                            <!-- header-logo start -->
+                            <div class="header-element header-logo">
+                                <a href="{{url_for('home_bp.index')}}" class="theme-logo">
+                                    <img src="static/image/logo/logo_cromwell.jpg" class="img-fluid" alt="logo">
+                                </a>
+                            </div>
+                            <!-- header-logo end -->
+                            <button class="toggler-button"><span class="line"></span></button>
+                            <!-- header-menu start -->
+                            <div class="header-element megamenu-content">
+                                <a href="#desk-main-collapse" data-bs-toggle="collapse" class="browse-cat">
+                                    <span class="menu-icon"><i class="fa-solid fa-bars"></i></span>
+                                    <span class="menu-title">Menu</span>
+                                    <span class="menu-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                </a>
+                                <div class="main-wrap collapse show" id="desk-main-collapse">
+                                    <ul class="main-menu">
+                                        <li class="menu-link">
+                                            <a href="{{url_for('home_bp.index')}}" class="link-title">
+                                                <span class="sp-link-title">Home</span>
+                                            </a>
+                                            <a href="#desk-menumain-single" data-bs-toggle="collapse"
+                                                class="link-title link-title-lg">
+                                                <span class="sp-link-title">Home</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-link">
+                                            <a href="{{url_for('home_bp.index')}}" class="link-title">
+                                                <span class="sp-link-title">Products</span>
+                                            </a>
+                                            <a href="#desk-menumain-single" data-bs-toggle="collapse"
+                                                class="link-title link-title-lg">
+                                                <span class="sp-link-title">Products</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-link">
+                                            <a href="{{url_for('home_bp.index')}}" class="link-title">
+                                                <span class="sp-link-title">Promotions</span>
+                                            </a>
+                                            <a href="#desk-menumain-single" data-bs-toggle="collapse"
+                                                class="link-title link-title-lg">
+                                                <span class="sp-link-title">Promotions</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-link">
+                                            <a href="{{url_for('home_bp.index')}}" class="link-title">
+                                                <span class="sp-link-title">Orders</span>
+                                            </a>
+                                            <a href="#desk-menumain-single" data-bs-toggle="collapse"
+                                                class="link-title link-title-lg">
+                                                <span class="sp-link-title">Orders</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-link">
+                                            <a href="{{url_for('home_bp.index')}}" class="link-title">
+                                                <span class="sp-link-title">Messages</span>
+                                            </a>
+                                            <a href="#desk-menumain-single" data-bs-toggle="collapse"
+                                                class="link-title link-title-lg">
+                                                <span class="sp-link-title">Messages</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-link">
+                                            <a href="{{url_for('home_bp.update_password')}}" class="link-title">
+                                                <span class="sp-link-title">Change passsword</span>
+                                            </a>
+                                            <a href="{{url_for('home_bp.update_password')}}" data-bs-toggle="collapse"
+                                                class="link-title link-title-lg">
+                                                <span class="sp-link-title">Change passsword</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header-menu end -->
+                            <!-- header-icon start -->
+                            <div class="header-element header-icon">
+                                <ul class="shop-element">
+                                    <li class="side-wrap user-wrap">
+                                        <div class="user-wrapper">
+                                            <a href="{{url_for('customer_bp.profile')}}">
+                                                <span class="user-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-user">
+                                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="12" cy="7" r="4"></circle>
+                                                    </svg></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="side-wrap cart-wrap">
+                                        <div class="cart-wrapper">
+                                            <a href="JavaScript:void(0)" class="cart-count">
+                                                <span class="cart-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" class="feather feather-shopping-bag">
+                                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z">
+                                                        </path>
+                                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                                    </svg></span>
+                                                <span class="cart-counter">11</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- header-icon end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+</body>
+
+</html>

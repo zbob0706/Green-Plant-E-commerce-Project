@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block title %}LOGIN{% endblock %}
+
+{% block content %}
+
+<head>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/favicon" href="image/favicon/favicon.png">
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- feather -->
+    <link rel="stylesheet" type="text/css" href="css/feather.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+    <!-- swiper slider -->
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+    <!-- magnific-popup css -->
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <!-- aniamte css -->
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <!-- font awsome -->
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <!-- collection css -->
+    <link rel="stylesheet" type="text/css" href="css/collection.css">
+    <!-- other-page css -->
+    <link rel="stylesheet" type="text/css" href="css/other-page.css">
+    <!-- blog css -->
+    <link rel="stylesheet" type="text/css" href="css/blog.css">
+    <!-- account css -->
+    <link rel="stylesheet" type="text/css" href="css/account.css">
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<!-- breadcrumb-area end -->
+<!-- customer-page  start-->
+<section class="customer-page section-ptb">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="acc-form">
+                    <div class="log-acc-page" id="CustomerLoginForm">
+                        <!-- account title start -->
+                        <div class="content-main-title">
+                            <div class="section-cont-title">
+                                <h2><span>Login account</span></h2>
+                            </div>
+                        </div>
+                        <!-- account title end -->
+                        <!-- account login start -->
+                        <div class="acc-page">
+                            <div class="login">
+                                <form method="POST" action="{{ url_for('home_bp.login') }}" id="loginForm">
+                                    {{ form.hidden_tag() }}
+
+                                    <div class="form-group">
+                                        {{ form.username.label(class="form-label") }}
+                                        {{ form.username(class="form-control", class=form.username.errors and
+                                        "is-invalid" or "") }}
+                                        {% for error in form.username.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                        {% endfor %}
+                                    </div>
+
+                                    <div class="form-group">
+                                        {{ form.password.label(class="form-label") }}
+                                        {{ form.password(class="form-control", class=form.password.errors and
+                                        "is-invalid" or "") }}
+                                        {% for error in form.password.errors %}
+                                        <div class="invalid-feedback">{{ error }}</div>
+                                        {% endfor %}
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-style2">Sign In</button>
+                                        <a href="{{ url_for('home_bp.update_password') }}">Reset password?</a>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="acc-wrapper">
+                                <h6>Don't have account?</h6>
+                                <div class="account-optional-action">
+                                    <a href="{{ url_for('home_bp.register') }}">Create
+                                        account</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- account login end -->
+                    </div>
+                    <div class="log-acc-page" id="RecoverPasswordForm" style="display: none;">
+                        <!-- account title start -->
+
+                        <!-- account title end -->
+                        <!-- account login start -->
+                        <div class="acc-page">
+                            <div class="login">
+                                <form method="post">
+                                    <div class="login-form-container">
+                                        <ul class="fill-form">
+                                            <li class="log-email">
+                                                <label>Email</label>
+                                                <input type="email" name="q" class="input-full" placeholder="Email"
+                                                    autocomplete="off">
+                                            </li>
+                                            <li class="form-toggle-btn">
+                                                <div class="form-action-button">
+                                                    <button type="submit" class="btn btn-style2">Submit</button>
+                                                    <a onclick="myFunction()" href="javascript:void(0)">Cancel</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- account login end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("RecoverPasswordForm");
+            var y = document.getElementById("CustomerLoginForm");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+            else {
+                x.style.display = "none";
+            }
+            if (y.style.display === "none") {
+                y.style.display = "block";
+            }
+            else {
+                y.style.display = "none";
+            }
+        }
+    </script>
+</section>
+<!-- customer-page  end-->
+<div class="preloader">
+    <div class="spinner-border text-success"></div>
+</div>
+<!-- preloader end -->
+<!-- screen bg start -->
+<div class="screen-bg"></div>
+<!-- screen bg end -->
+<a href="javascript:void(0)" id="top" class="scroll"><span><i class="fa-solid fa-arrow-up"></i></span></a>
+<!-- jquery -->
+<script src="js/jquery-3.6.0.min.js"></script>
+<!-- bootstarp -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.min.js"></script>
+<!-- magnific popup js -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<!-- swiper sider -->
+<script src="js/swiper-bundle.min.js"></script>
+<!-- counter js -->
+<script src="js/counter.js"></script>
+<!-- owl carousel -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- slick slider -->
+<script src="js/slick.min.js"></script>
+<!-- custom js -->
+<script src="js/custom.js"></script>
+<!-- main js -->
+<script src="js/main.js"></script>
+{% endblock %}

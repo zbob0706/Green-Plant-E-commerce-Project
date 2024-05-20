@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Naturo - The Plant & Outdoor HTML5 Template{% endblock %}</title>
+    <meta name="description"
+        content="A best clean, modern, stylish, creative, responsive theme for different eCommerce business or industries." />
+    <meta name="keywords"
+        content="organic food theme, vegetables, food store, eCommerce html template, responsive, beds cabinets, Outdoor plants and seating., chests, clocks, desks, tables, dressers, cupboards accessories, desks, plastic, restaurant accessories" />
+    <meta name="author" content="Webtemplate">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/favicon" href="{{ url_for('static', filename='image/favicon/favicon.png') }}">
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- feather -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/feather.css') }}">
+    <!-- owl carousel -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <!-- swiper slider -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swiper-bundle.min.css') }}">
+    <!-- magnific-popup css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slick.css') }}">
+    <!-- animate css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.min.css') }}">
+    <!-- font awesome -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <!-- collection css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/collection.css') }}">
+    <!-- other-page css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/other-page.css') }}">
+    <!-- blog css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/blog.css') }}">
+    <!-- account css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/account.css') }}">
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- top notification start -->
+    <div class="top-noticifaction-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <ul class="noticifaction-entry">
+                        <li class="notify-wrap contact-link">
+                            <div class="text-wrap">
+                                <div class="richtext">
+                                    <p>Free shipping plant store for above 78.00</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="notify-wrap notify-wrap-center">
+                            <div class="richtext">
+                                <p>Welcome to our Naturo plant online store</p>
+                            </div>
+                        </li>
+                        <li class="notify-wrap notify-wrap-right">
+                            <div class="richtext">
+                                <p>Online order <a href="" title="tel:+291003600600">+2910 0360 0600</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- top notification end -->
+
+    <!-- header start -->
+    <header class="main-header">
+        <div class="header-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="header-main">
+                            <!-- header-logo start -->
+                            <div class="header-element header-logo">
+                                <a href="{{ url_for('home_bp.index') }}" class="theme-logo">
+                                    <img src="{{ url_for('static', filename='image/logo/logo_cromwell.jpg') }}"
+                                        class="img-fluid" alt="logo">
+                                </a>
+                            </div>
+                            <!-- header-logo end -->
+                            <button class="toggler-button"><span class="line"></span></button>
+                            <!-- header-menu start -->
+                            <div class="header-element megamenu-content">
+                                <a href="#desk-main-collapse" data-bs-toggle="collapse" class="browse-cat">
+                                    <span class="menu-icon"><i class="fa-solid fa-bars"></i></span>
+                                    <span class="menu-title">Menu</span>
+                                    <span class="menu-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                </a>
+                                <div class="main-wrap collapse show" id="desk-main-collapse">
+                                    <ul class="main-menu">
+                                        <li class="menu-link">
+                                            <a href="{{ url_for('home_bp.index') }}" class="link-title">
+                                                <span class="sp-link-title">Home</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-link">
+                                            <a href="#" class="link-title">
+                                                <span class="sp-link-title">Collection</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-link">
+                                            <a href="#" class="link-title">
+                                                <span class="sp-link-title">Product</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-link">
+                                            <a href="#" class="link-title">
+                                                <span class="sp-link-title">Blog</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-link">
+                                            <a href="#" class="link-title">
+                                                <span class="sp-link-title">Pages</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- header-menu end -->
+                            <!-- header-icon start -->
+                            <div class="header-element header-icon">
+                                <ul class="shop-element">
+                                    <li class="side-wrap search-wrap">
+                                        <div class="search-wrapper">
+                                            <a href="#search-modal" data-bs-toggle="modal">
+                                                <span class="search-icon">
+                                                    <i class="feather feather-search"></i>
+                                                </span>
+                                                <span class="search-title">Find our item</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="side-wrap user-wrap">
+                                        <div class="user-wrapper">
+                                            <a href="{{ url_for('home_bp.login') }}">
+                                                <span class="user-icon"><i class="feather feather-user"></i></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="side-wrap wishlist-wrap">
+                                        <div class="wishlist-wrapper">
+                                            <a href="#">
+                                                <span class="wishlist-icon"><i class="feather feather-heart"></i></span>
+                                                <span class="wishlist-counter">3</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="side-wrap cart-wrap">
+                                        <div class="cart-wrapper">
+                                            <a href="JavaScript:void(0)" class="cart-count">
+                                                <span class="cart-icon"><i
+                                                        class="feather feather-shopping-bag"></i></span>
+                                                <span class="cart-counter">11</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- header-icon end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- breadcrumb-area start -->
+    <section class="breadcrumb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="breadcrumb-index">
+                        <!-- breadcrumb-list start -->
+                        <ul class="breadcrumb-list">
+                            <li class="breadcrumb-title">
+                                <a href="{{ url_for('home_bp.index') }}" title="Back to the home page">Home</a>
+                            </li>
+                            {% block breadcrumb %}
+                            <li class="breadcrumb-title">
+                                <span>Page</span>
+                            </li>
+                            {% endblock %}
+                        </ul>
+                        <!-- breadcrumb-list end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb-area end -->
+
+    <!-- Page Content -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- footer start -->
+    <section class="footer-area section-ptb">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-list-wrap">
+                        <ul class="footer-list">
+                            <li class="ftlink-li ft-detils">
+                                <div class="footer-info">
+                                    <h2 class="ft-title">Need help you ?</h2>
+                                    <div class="rich-text">
+                                        <p>There are many variations of passages <br>of lorem ipsum available, but the !
+                                        </p>
+                                    </div>
+                                    <ul class="social-icon">
+                                        <li class="facebook">
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="gplus">
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-brands fa-pinterest-p"></i>
+                                            </a>
+                                        </li>
+                                        <li class="pinterest">
+                                            <a href="javascript:void(0)">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="ftlink-li custom-text text-left text-lg-left ft-detils">
+                                <h2 class="ft-title">Opening time</h2>
+                                <div class="rich-text">
+                                    <p>Monday - Thursday : 8:30AM to 6:30PM
+                                        <span>Friday - Saturday : 8:30AM to 4:00PM </span>
+                                        <span>Sunday : ALL DAYS CLOSED </span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="ftlink-li text-left text-lg-left ft-detils">
+                                <div class="news-content">
+                                    <h2 class="ft-title">Subscribe newsletter</h2>
+                                    <div class="rich-text">
+                                        <p>Get now free 20% discount for all<br>products on your first order!</p>
+                                    </div>
+                                    <form method="post" action="/contact#contact_form" class="contact-form">
+                                        <input type="hidden" name="form_type" value="customer">
+                                        <input type="hidden" name="utf8" value="✓">
+                                        <div class="news-wrap">
+                                            <input type="hidden" name="contact[tags]" value="newsletter">
+                                            <input type="email" name="contact[email]" class="email mail" id="E-mail"
+                                                value="" placeholder="Enter your email" autocapitalize="off"
+                                                required="">
+                                            <button type="submit" name="commit" id="Subscribe"><i
+                                                    class="fa-regular fa-envelope-open"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer end -->
+
+    <!-- bottom-footer-area start -->
+    <section class="bottom-footer-area section-ptb">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-list-wrap">
+                        <ul class="footer-list">
+                            <li class="ftlink-li link-list text-left text-lg-left">
+                                <h2 class="ft-title md-d-none">Information</h2>
+                                <a data-bs-toggle="collapse" href="#collapse-information" class="ft-title">
+                                    <span>Information</span>
+                                    <i class="fa-light fa-plus"></i>
+                                </a>
+                                <ul class="collapse footer-sublist link" id="collapse-information">
+                                    <li class="ftsublink-li">
+                                        <a href="#" class="ft-sublink">About plants</a>
+                                    </li>
+                                    <li class="ftsublink-li">
+                                        <a href="#" class="ft-sublink">Customer
+                                            service</a>
+                                    </li>
+                                    <li class="ftsublink-li">
+                                        <a href="#" class="ft-sublink">Product sellar</a>
+                                    </li>
+                                    <li class="ftsublink-li">
+                                        <a href="#" class="ft-sublink">Accessibility state</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ftlink-li link-list text-left text-lg-left">
+                                <h2 class="ft-title md-d-none">Plants legal</h2>
+                                <a data-bs-toggle="collapse" href="#collapse-plants-legal" class="ft-title">
+                                    <span>Plants legal</span>
+                                    <i class="fa-light fa-plus"></i>
+                                </a>
+                                <ul class="collapse  footer-sublist link" id="collapse-plants-legal">
+                                    <li class="ftsublink-li">
+                                        <a href=" #" class="ft-sublink">Privacy
+                                            policy</a>
+                                    </li>
+                                    <li class="ftsublink-li">
+                                        <a href="#" class="ft-sublink">Return
+                                            policy</a>
+                                    </li>
+                                    <li class="ftsublink-li">
+                                        <a href="#" class="ft-sublink">Terms
+                                            conditons </a>
+                                    </li>
+                                    <li class="ftsublink-li">
+                                        <a href="#" class="ft-sublink">Payment
+                                            policy</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ftlink-li link-list text-left text-lg-left">
+                                <h2 class="ft-title md-d-none">Browse category</h2>
+                                <a data-bs-toggle="collapse" href="#collapse-browse-category" class="ft-title">
+                                    <span>Browse category</span>
+                                    <i class="fa-light fa-plus"></i>
+                                </a>
+                                <ul class="collapse  footer-sublist link" id="collapse-browse-category">
+                                    <li class="ftsublink-li">
+                                        <a href="#" class="ft-sublink">Outdoor plants</a>
+                                    </li>
+                                    <li class="ftsublink-li">
+                                        <a href="#" class="ft-sublink">Indoor plants</a>
+                                    </li>
+                                    <li class="ftsublink-li">
+                                        <a href="#" class="ft-sublink">Office plants</a>
+                                    </li>
+                                    <li class="ftsublink-li">
+                                        <a href="#" class="ft-sublink">Greenary
+                                            plants</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ftlink-li payment-block text-left text-lg-left">
+                                <div class="pay-icon">
+                                    <h2 class="ft-title">Payment method</h2>
+                                    <a href="javascript:void(0)" class="payment-icon">
+                                        <img src="{{ url_for('static', filename='image/payment-icon/visa.svg') }}"
+                                            alt="pay-icon">
+                                        <img src="{{ url_for('static', filename='image/payment-icon/paypal.svg') }}"
+                                            alt="pay-icon">
+                                        <img src="{{ url_for('static', filename='image/payment-icon/master.svg') }}"
+                                            alt="pay-icon">
+                                        <img src="{{ url_for('static', filename='image/payment-icon/american.svg') }}"
+                                            alt="pay-icon">
+                                    </a>
+                                </div>
+                                <div class="app-icon">
+                                    <h2 class="ft-title">Download app</h2>
+                                    <a href="index.html" class="img-content">
+                                        <img src="{{ url_for('static', filename='image/payment-icon/app-icon1.png') }}"
+                                            class="img-fluid" alt="app-icon1">
+                                    </a>
+                                    <a href="index.html" class="img-content">
+                                        <img src="{{ url_for('static', filename='image/payment-icon/app-icon2.png') }}"
+                                            class="img-fluid" alt="app-icon2">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- bottom-footer-area end -->
+
+    <!-- footer start -->
+    <footer class="footer-bottom-area">
+        <div class="container">
+            <ul class="footer-bottom">
+                <li class="ftlink-li">
+                    <a href="{{ url_for('home_bp.index') }}" class="theme-logo">
+                        <img src="{{ url_for('static', filename='image/logo/logo_cromwell.jpg') }}" class="img-fluid"
+                            alt="freozy">
+                    </a>
+                </li>
+                <li class="ftlink-li">
+                    <div class="richtext">
+                        <p>Copyright © 2023 spacingtech™</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+</body>
+
+</html>

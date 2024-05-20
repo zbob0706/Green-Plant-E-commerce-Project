@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container mt-5 d-flex justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center">Register</h2>
+            <form method="POST" action="{{ url_for('home_bp.register') }}" id="registrationForm" novalidate>
+                {{ form.hidden_tag() }}
+
+                <div class="form-group">
+                    {{ form.username.label(class="form-label") }}
+                    <div class="input-group">
+                        {{ form.username(class="form-control", class=form.username.errors and "is-invalid" or
+                        "is-valid") }}
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="fa" id="username-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    {% for error in form.username.errors %}
+                    <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.email.label(class="form-label") }}
+                    <div class="input-group">
+                        {{ form.email(class="form-control", class=form.email.errors and "is-invalid" or "is-valid") }}
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="fa" id="email-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    {% for error in form.email.errors %}
+                    <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.password.label(class="form-label") }}
+                    <div class="input-group">
+                        {{ form.password(class="form-control", class=form.password.errors and "is-invalid" or
+                        "is-valid") }}
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="fa" id="password-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    {% for error in form.password.errors %}
+                    <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.confirm_password.label(class="form-label") }}
+                    <div class="input-group">
+                        {{ form.confirm_password(class="form-control", class=form.confirm_password.errors and
+                        "is-invalid"
+                        or "is-valid") }}
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="fa" id="confirm-password-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    {% for error in form.confirm_password.errors %}
+                    <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.first_name.label(class="form-label") }}
+                    <div class="input-group">
+                        {{ form.first_name(class="form-control", class=form.first_name.errors and "is-invalid" or
+                        "is-valid") }}
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="fa" id="first-name-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    {% for error in form.first_name.errors %}
+                    <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.last_name.label(class="form-label") }}
+                    <div class="input-group">
+                        {{ form.last_name(class="form-control", class=form.last_name.errors and "is-invalid" or
+                        "is-valid")
+                        }}
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="fa" id="last-name-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    {% for error in form.last_name.errors %}
+                    <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.phone.label(class="form-label") }}
+                    <div class="input-group">
+                        {{ form.phone(class="form-control", class=form.phone.errors and "is-invalid" or "is-valid") }}
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="fa" id="phone-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    {% for error in form.phone.errors %}
+                    <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.address.label(class="form-label") }}
+                    <div class="input-group">
+                        {{ form.address(class="form-control", class=form.address.errors and "is-invalid" or "is-valid")
+                        }}
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="fa" id="address-icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    {% for error in form.address.errors %}
+                    <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-primary btn-block") }}
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('registrationForm').addEventListener('input', function (event) {
+            if (event.target.classList.contains('form-control')) {
+                let icon = event.target.nextElementSibling.querySelector('.fa');
+                if (event.target.checkValidity()) {
+                    event.target.classList.remove('is-invalid');
+                    event.target.classList.add('is-valid');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-check');
+                    icon.style.color = 'green';
+                } else {
+                    event.target.classList.remove('is-valid');
+                    event.target.classList.add('is-invalid');
+                    icon.classList.remove('fa-check');
+                    icon.classList.add('fa-times');
+                    icon.style.color = 'red';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
